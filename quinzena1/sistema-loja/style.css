@@ -2,13 +2,23 @@ body {
     background-image: url(img/Fundo.png);
     background-size: cover;
     margin: 0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
-    color: rgb(16, 29, 25);
+    font-family: 'Times New Roman', Times, serif; 
+    color: rgb(196, 194, 194);
+}
+
+a {
+    color: rgb(196, 194, 194);
+    text-decoration: underline;
+
+}
+
+h1, h2 {
+    text-align: center;
 }
 
 header {
     width: 100%;
-    background-color: rgb(119, 136, 153);
+    background-color: rgb(77, 126, 199);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,12 +28,16 @@ header {
     padding: 0;
 }
 
+table {
+    background-color: rgb(41, 85, 151);
+}
+
 .landings {
-    margin: auto 3%;
+    margin: auto 4%;
 }
 
 .titulos {
-    margin-top: 5%;
+    margin-top: 6%;
 }
 
 #logo {
@@ -47,7 +61,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(119, 136, 153, 0.575);
+    background-color: rgba(77, 126, 199, 0.829);
     position: absolute;
     bottom: 0;
 }
@@ -55,6 +69,22 @@ footer {
 .redes {
     width: 50px;
     height: 50px;
+}
+
+.forms {
+    width: 30%;
+    height: 15%;
+    background-color: rgb(41, 85, 151);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 35%;
+    right: 35%;
+}
+
+.botao {
+    background-color: rgb(41, 85, 151);
+    color: rgb(196, 194, 194);
 }
 
 table {
@@ -69,6 +99,10 @@ table, th, td {
 .capas {
     width: 150px;
     height: 150px;
+}
+
+#venda {
+    margin-top: 6%;
 }
 
 
