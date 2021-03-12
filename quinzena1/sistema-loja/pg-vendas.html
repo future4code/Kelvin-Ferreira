@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Página de Vendas</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1 class="landings">PlayStatus-On</h1>
+        </div>
+    
+        <div>
+            <a class="landings" href="index.html">Página Inicial</a>
+            <a class="landings" href="ctrl-estoque.html">Controle de Estoque</a>
+            <a class="landings" href="pg-vendas.html">Vendas</a>
+            <a class="landings" href="historico-vendas.html">Histórico</a>
+            <a class="landings" href="add-produto.html">Adicionar Produto</a>
+            <a class="landings" href="funcionarios.html">Funcionários</a>
+        </div>
+    </header> 
+
+    <h2 class="titulos">Registrar Vendas</h2>
+
+    <div id= "logo">
+        <img id= "logotipo" src="img/Logo.png" alt="Logo Playstation">
+    </div>
+    
+    <div class="forms">
+        <form action="">
+            <label for="product">Produto vendido:</label>
+            <input list="products" id="product" name="product">
+            <datalist id="products">
+                <option value="Dark Souls">
+                <option value="Dark Souls 3">
+                <option value="Resident Evil 2- Remastered">
+                <option value="Shadow of The Colossus - PS3">
+                <option value="The Last of Us">               
+            </datalist><br>
+            <label for="formpgto">Forma de pagamento:</label>
+            <input list="pgto" id="formpgto" name="formpgto">
+            <datalist id="pgto">
+                <option value="Cartão de Crédito">
+                <option value="Dinheiro (Boleto)">    
+            </datalist><br>
+            <input class="botao" type="submit" value="Registrar">
+        </form>
+    </div>    
+    
+    <footer>
+        <div class="consideracao">
+            <h3>Aqui na PlayStatus-On nós te oferecemos os melhores e mais populares títulos de Playstation, da primeira à última geração por um preço mais que justo!</h3>
+        </div>
+
+    
+        <div class="consideracao">
+            <p>Siga-nos nas redes sociais!</p>
+
+            <div>
+                <img class="redes" src="https://image.flaticon.com/icons/png/512/25/25305.png"/>
+                <img class="redes" src="https://image.flaticon.com/icons/png/512/25/25425.png"/>
+                <img class="redes" src="https://image.flaticon.com/icons/png/512/8/8800.png"/>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
