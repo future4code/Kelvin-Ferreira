@@ -1,0 +1,64 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    color: white;
+}
+
+#main-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 10fr 4fr 1fr;
+}
+
+
+.green-background {
+    background-color: green;
+    grid-column: 1 / 2;
+    text-align: center;
+    padding: 24px;
+}
+
+.yellow-background {
+    background-color: yellow;
+    grid-column: 2 / 5;
+    text-align: center;
+    padding: 24px;
+}
+
+.pink-background {
+    background-color: fuchsia;
+    grid-column: 1 / 5;
+}
+
+.blue-background {
+    background-color: blue;
+    grid-column: 1 / 3;
+    text-align: center;
+    padding: 88px;
+}
+
+#blank {
+    grid-column: 3 / 4;
+}
+
+.red-background {
+    background-color: red;
+    height: 100px;
+    text-align: center;
+}
+
+.lightgreen-background {
+    background-color: lightgreen;
+    height: 100px;
+    text-align: center;
+}
+
+.purple-background {
+    background-color: purple;
+    grid-column: 1 / 5;
+    text-align: center;
+}
