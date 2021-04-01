@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 48vh 56vh 1fr 1fr 16vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fffbfb94;
+    box-shadow: 3px 3px #8f7364;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-row: 1 / 2;
+    grid-column:  1 / -1;
+    align-items: center;
+    transition: 0.5s;
+}
+
+#logo {
+    height: 300px;
+}
+
+nav {
+    margin-bottom: 3vh;
+}
+
+a {
+    color: #8f7364;
+    text-decoration: none;
+}
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* Seções do site*/
+    /* seção 1 */
+#middle-container {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+main{
+    background-color: #8f7364be;
+    height: 70%;
+    text-align:justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    transition: 1s;
+    border-radius: 12px;
+    color: whitesmoke;
+}
+    main:hover {
+        color: white;
+        background-color: #8f7364;
+        border: 3px solid #6e594e;
+    }
+
+#texto-principal {
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 124%;
+}
+
+
+#media1 {
+    margin-top: 5vh;
+    height: 76%;
+}
+
+#foto1 {
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+    border-radius: 12px;
+    transition: 1s;
+} 
+    #foto1:hover {
+        filter: brightness(100%);
+    }
+
+
+    /* seção 2 */
+#third-container {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+#inside-third-container {
+    background-color: #8f7364be;
+    height: 70%;
+    text-align:justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    transition: 1s;
+    border-radius: 12px;
+    color: whitesmoke;
+}
+    #inside-third-container:hover {
+        color: white;
+        background-color: #8f7364;
+        border: 3px solid #6e594e;
+    }
+
+#texto-delivery {
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 124%;
+}
+
+/* icones também válidos para o rodapé */
+
+.icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+.icone {
+    width: 35px;
+    height: 35px;
+}
+
+#foto2 {
+    border-radius: 12px;
+    filter: brightness(70%);
+    transition: 1s;
+}
+    #foto2:hover {
+        filter: brightness(100%);
+    }
+
+    /* seção 3 */
+
+#fourth-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+#inside-fourth-container {
+    background-color: #8f7364be;
+    height: 70%;
+    text-align:justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    transition: 1s;
+    border-radius: 12px;
+    color: whitesmoke;
+}
+    #inside-fourth-container:hover {
+        color: white;
+        background-color: #8f7364;
+        border: 3px solid #6e594e;
+    }
+
+#texto-diet {
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 124%;
+}
+
+#foto3 {
+    margin-top: 5vh;
+    height: 76%;
+    width: 50%;
+    border-radius: 12px;
+    filter: brightness(70%);
+    transition: 1s;
+}
+    #foto3:hover {
+        filter: brightness(100%);
+    }
+/* Fim das seções  */
+
+    /* Rodapé */
+
+footer {
+    color: whitesmoke;
+    background-color: #8f7364be;
+    grid-column: 1 / -1;
+    text-align: center;
+    transition: 1s;
+}
+    footer:hover {
+        color:white;
+        background-color: #8f7364;
+        border: 3px solid #6e594e;
+    }
+
+h3 {
+    margin-top: 3vh;
+    font-size: 125%;
+}
+
+/* Página-Contato */
+
+/* Esse main container2 também é o utilizado na página do Quem Somos */
+.main-container2 {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 40vh 44vh 16vh;
+}
+
+#main2 {
+    margin-top: 0 auto;
+    grid-column: 2 / 4;
+}
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    height: 20%;
+    width: 50%;
+}
+textarea {
+    height: 30%;
+    width: 50%;
+}
+
+button {
+    color: white;
+    background-color: #6e594e;
+    padding: 2%;
+}
+
+
+/* Página Quem Somos  */
+#container-quemsomos {
+    background-color: white;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:space-around;
+}
+    #container-quemsomos {
+        border: none;
+    }
+
+.diretrizes {
+    margin: 0 10vw;
+    height: 80%;
+    width: 50%;
+    background-color: #8f7364be; 
+    border-radius: 12px;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    font-size: 124%;
+    transition: 1s;
+}
+    .diretrizes:hover {
+        color:white;
+        background-color: #8f7364;
+        border: 3px solid #6e594e;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    /* Respondividade para celulares */
+
+@media screen and (max-width: 420px) {
+    /* Configurações gerais de estrutura do site */
+    * {
+        text-align: left;
+    }
+
+    .responsive {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }
+
+/* ajuste na página inicial */
+    #main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 40vh 1fr 1fr 1fr 16vh;
+    }
+
+    #logo {
+        height: 230px;
+    }
+
+    #middle-container {
+        flex-direction: column-reverse;
+        margin-bottom: 10vh;
+    }
+
+    main {
+        margin-top: 0;
+    }
+
+    #texto-principal {
+            font-size: 100%;
+    }    
+    #media1 {
+        height: 40%;
+    }
+    #foto1 {
+        height: 100%;
+        width: 100%;
+    } 
+    #foto2 {
+        width: 100%;
+    } 
+    #foto3 {
+        width: 100%;
+    } 
+
+    #third-container {
+        flex-direction: column-reverse;
+        margin-bottom: 7vh;
+    }
+
+    #inside-third-container {
+        margin-top: -1vh;
+    }
+
+    #texto-delivery {
+        font-size: 100%;
+    }
+
+    #fourth-container {
+        flex-direction: column-reverse;
+        margin-bottom: 10vh;
+    }
+
+    #inside-fourth-container {
+        margin-top: 0;
+    }
+
+    #texto-diet {
+        font-size: 100%;
+    }
+
+    /* Ajuste página contato */
+
+    #main2 {
+        margin-top: 0 auto;
+        grid-column: 1 / 5;
+    }
+
+    input {
+        height: 20%;
+        width: 70%;
+   
+    }
+    textarea {
+        height: 30%;
+        width: 70%;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .icone {
+        width: 20px;
+        height: 20px;
+        margin: 2px;
+    }
+
+/* ajuste página quem somos */
+
+    #container-quemsomos {
+        margin-top: 8vh;
+        flex-direction: column;
+
+    }
+
+    #main-container2ponto1 {
+        display: grid;
+        grid-template-rows: 40vh 80vh 16vh;
+    }
+
+    .diretrizes {
+        margin: 8vh 10vw 0vh 10vw;
+        height: 80%;
+        width: 90%;
+        font-size: 100%;
+        padding: 1vh 1vw;
+    }
+        .diretrizes:hover {
+            color:white;
+            background-color: #8f7364;
+            border: 3px solid #6e594e;
+        }
+    
+    ul {
+        list-style: none;
+    }
+}
