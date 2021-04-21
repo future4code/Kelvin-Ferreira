@@ -83,11 +83,11 @@ function retornaNNumerosPares(n) {
 function checaTriangulo(a, b, c) {
   // implemente sua lógica aqui
   if(a === b && a === c && b === c) {
-     console.log("Equilatero")
+     return "Equilatero"
   } else if((a === b && a !== c) || (a === c && a !== b) || (b === c && b !== a)) {
-     console.log("Isóceles")
+     return "Isóceles"
   } else if(a !== b && a !== c && b !== c) {
-     console.log("Escaleno")   
+     return "Escaleno"
   }
 }
 
@@ -95,8 +95,33 @@ function checaTriangulo(a, b, c) {
 
 function comparaDoisNumeros(num1, num2) {
    // implemente sua lógica aqui
-}
+   let numeros = [num1, num2]
+   let saida = {
+      maiorNumero: 0,
+      maiorDivisielporMenor: undefined,
+      diferenca: 0
+   }
 
+   for(numero of numeros) {
+      if(numero > saida.maiorNumero) {
+         saida.maiorNumero = numero
+      }
+   }
+
+   if((num1 === saida.maiorNumero && num1 % num2 === 0) || (num2 === saida.maiorNumero && num2 % num1 === 0)) {
+      saida.maiorDivisielporMenor = true
+   } else {
+      saida.maiorDivisielporMenor = false
+   }
+
+   if(num1 === saida.maiorNumero) {
+      saida.diferenca = num1 - num2
+   } else if(num2 === saida.maiorNumero) {
+      saida.diferenca = num2 - num1
+   }
+   console.log(saida.diferenca)
+}
+   
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
