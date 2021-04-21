@@ -70,17 +70,25 @@ function retornaNNumerosPares(n) {
    // implemente sua lógica aqui
    let numerosPares = []
    let contador = 0
+
    while(contador < n) {
       numerosPares.push(contador * 2)
       contador++
    }
-   console.log(numerosPares)
+   return numerosPares
 }
 
 // Exercício 8
 
 function checaTriangulo(a, b, c) {
   // implemente sua lógica aqui
+  if(a === b && a === c && b === c) {
+     console.log("Equilatero")
+  } else if((a === b && a !== c) || (a === c && a !== b) || (b === c && b !== a)) {
+     console.log("Isóceles")
+  } else if(a !== b && a !== c && b !== c) {
+     console.log("Escaleno")   
+  }
 }
 
 // Exercício 9
