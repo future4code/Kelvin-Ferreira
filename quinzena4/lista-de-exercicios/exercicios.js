@@ -68,6 +68,13 @@ function retornaExpressoesBooleanas() {
 
 function retornaNNumerosPares(n) {
    // implemente sua lógica aqui
+   let numerosPares = []
+   let contador = 0
+   while(contador < n) {
+      numerosPares.push(contador * 2)
+      contador++
+   }
+   console.log(numerosPares)
 }
 
 // Exercício 8
