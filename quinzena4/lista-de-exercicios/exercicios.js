@@ -46,13 +46,14 @@ function retornaMaiorNumero(array) {
          maiorNumero = numero
       }
    }
-   console.log(maiorNumero)
+   return maiorNumero
 }
 
 //Exercício 5
 
 function retornaQuantidadeElementos (array) {
    // implemente sua lógica aqui
+   return array.length
 }
 
 //Exercício 6
