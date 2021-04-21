@@ -14,14 +14,19 @@ function inverteArray(array) {
 
 function retornaNumerosParesElevadosADois (array) {
    // implemente sua lógica aqui
-
+   const paresElevadosADois = []
+   for(numero of array) {
+      if(numero % 2 === 0) {
+         paresElevadosADois.push(Math.pow(numero, 2))
+      }
+   }
+   return paresElevadosADois
 }
 
 //Exercício 3
 
 function retornaNumerosPares (array) {
    // implemente sua lógica aqui
-
 }
 
 //Exercício 4
