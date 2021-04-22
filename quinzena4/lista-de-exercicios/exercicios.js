@@ -119,13 +119,50 @@ function comparaDoisNumeros(num1, num2) {
    } else if(num2 === saida.maiorNumero) {
       saida.diferenca = num2 - num1
    }
-   console.log(saida.diferenca)
+
+   return saida
 }
    
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
    // implemente sua lógica aqui
+   const arrayMaiorEMenor = []
+   let maiorNumero = 0
+   let menorNumero = undefined
+   let segundoMaior = 0
+   let segundoMenor = undefined
+
+   for(numero of array) {
+      if(numero > maiorNumero) {
+         maiorNumero = numero
+      } 
+   }
+   for(numero of array) { 
+      if(numero < maiorNumero && numero > segundoMaior) {
+         segundoMaior = numero
+      }
+   }
+
+   arrayMaiorEMenor.push(segundoMaior)
+   
+   menorNumero = maiorNumero 
+   segundoMenor = maiorNumero
+
+   for(numero of array) {
+      if(numero < menorNumero) {
+         menorNumero = numero
+      } 
+   }
+   for(numero of array) {
+      if(numero > menorNumero && numero < segundoMenor) {
+         segundoMenor = numero
+      }
+   }
+
+   arrayMaiorEMenor.push(segundoMenor)
+
+   return arrayMaiorEMenor
 }
 
 //Exercício 11
