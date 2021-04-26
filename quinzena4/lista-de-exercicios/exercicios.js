@@ -172,15 +172,20 @@ function ordenaArray(array) {
    array.sort((a, b) => {
       return a-b
    })
-
-   console.log(array)
-
 }
 
 // Exercício 12
 
 function filmeFavorito() {
    // implemente sua lógica aqui
+   const filmeAstrodev = {
+      nome: "O Diabo Veste Prada",
+      ano: 2006,
+      diretor: "David Frankel",
+      atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+   }
+
+   return filmeAstrodev
 }
 
 // Exercício 13
@@ -193,27 +198,13 @@ function imprimeChamada() {
 
 function criaRetangulo(lado1, lado2) {
    // implemente sua lógica aqui
-   let retangulo = {
-      largura: lado1,
-      altura: lado2,
-      perimetro: 2 * (lado1 + lado2),
-      area: lado1 * lado2
-   }
-
-   return retangulo
 }
 
 // Exercício 15
 
-// function anonimizaPessoa(pessoa) {
+function anonimizaPessoa(pessoa) {
    // implemente sua lógica aqui
-//    const outraPessoa = {
-//       ...pessoa 
-//       nome: 'ANÔNIMO'
-//    }
-
-//    return outraPessoa
-// }
+}
 
 // Exercício 16
 
@@ -228,57 +219,30 @@ const arrayDePessoas = [
 
 function maioresDe18(arrayDePessoas) {
    // implemente sua lógica aqui
-   const pessoasAdultas = arrayDePessoas.filter((pessoa) => {
-      if(pessoa.idade >= 18) {
-         return true
-      }
-
-      return false
-   })
 }
 
 // Exercício 16, letra B
 
 function menoresDe18(arrayDePessoas) {
    // implemente sua lógica aqui
-   const pessoasNaoAdultas = arrayDePessoas.filter((pessoa) => {
-      if(pessoa.idade <= 18) {
-         return true
-      }
-
-      return false
-   })
 }
 
 // Exercício 17, letra A
 
 function multiplicaArrayPor2(array) {
    // implemente sua lógica aqui
-   const resultadoMultiplicação = array.map((numero) => {
-      return numero *2
-   }) 
 }
 
 // Exercício 17, letra B
 
 function multiplicaArrayPor2S(array) {
   // implemente sua lógica aqui
-   const resultadoMultiplicação = array.map((numero) => {
-      return (numero * 2.).toString()
-   }) 
 }
 
 // Exercício 17, letra C
 
 function verificaParidade(array) {
    // implemente sua lógica aqui
-   const resultadoVerificaçãodeParidade = array.map((numero) => {
-      if(numero % 2 === 0) {
-         return `${numero.toString()} é par`
-      } else if(numero % 2 === 1) {
-         return `${numero.toString()} é ímpar`
-      }
-   }) 
 }
 
 // Exercício 18
@@ -296,21 +260,6 @@ const pessoas = [
 
 function retornaPessoasAutorizadas() {
    // implemente sua lógica aqui
-   const pessoas = [
-      { nome: "Paula", idade: 12, altura: 1.8},
-      { nome: "João", idade: 20, altura: 1.3},
-      { nome: "Pedro", idade: 15, altura: 1.9},
-      { nome: "Luciano", idade: 22, altura: 1.8},
-      { nome: "Artur", idade: 10, altura: 1.2},
-      { nome: "Soter", idade: 70, altura: 1.9}
-   ]
-
-   const pessoasAutorizadas = pessoas.filter((individuo) => {
-      if(individuo.idade > 14 && individuo.idade < 60 && individuo.altura >= 1.5) {
-         return true
-      }
-      return false
-   })
 }
 
 
@@ -318,22 +267,6 @@ function retornaPessoasAutorizadas() {
 
 function retornaPessoasNaoAutorizadas() {
    // implemente sua lógica aqui
-   const pessoas = [
-      { nome: "Paula", idade: 12, altura: 1.8},
-      { nome: "João", idade: 20, altura: 1.3},
-      { nome: "Pedro", idade: 15, altura: 1.9},
-      { nome: "Luciano", idade: 22, altura: 1.8},
-      { nome: "Artur", idade: 10, altura: 1.2},
-      { nome: "Soter", idade: 70, altura: 1.9}
-   ] 
-
-   const pessoasNaoAutorizadas = pessoas.filter((individuo) => {
-      if(individuo.idade < 14 || individuo.idade > 60 || individuo.altura < 1.5) {
-         return true
-      }
-      
-      return false
-   })
 }
 
 //Exercício 19
