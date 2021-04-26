@@ -244,12 +244,26 @@ const arrayDePessoas = [
 
 function maioresDe18(arrayDePessoas) {
    // implemente sua lógica aqui
+   const pessoasAdultas = arrayDePessoas.filter((pessoa) => {
+      if(pessoa.idade >= 18) {
+         return true
+      }
+
+      return false
+   })
 }
 
 // Exercício 16, letra B
 
 function menoresDe18(arrayDePessoas) {
    // implemente sua lógica aqui
+   const pessoasNaoAdultas = arrayDePessoas.filter((pessoa) => {
+      if(pessoa.idade <= 18) {
+         return true
+      }
+
+      return false
+   })
 }
 
 // Exercício 17, letra A
