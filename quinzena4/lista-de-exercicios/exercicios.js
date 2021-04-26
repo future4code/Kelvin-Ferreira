@@ -270,18 +270,31 @@ function menoresDe18(arrayDePessoas) {
 
 function multiplicaArrayPor2(array) {
    // implemente sua lógica aqui
+   const resultadoMultiplicação = array.map((numero) => {
+      return numero *2
+   }) 
 }
 
 // Exercício 17, letra B
 
 function multiplicaArrayPor2S(array) {
   // implemente sua lógica aqui
+   const resultadoMultiplicação = array.map((numero) => {
+      return (numero * 2.).toString()
+   }) 
 }
 
 // Exercício 17, letra C
 
 function verificaParidade(array) {
    // implemente sua lógica aqui
+   const resultadoVerificaçãodeParidade = array.map((numero) => {
+      if(numero % 2 === 0) {
+         return `${numero.toString()} é par`
+      } else if(numero % 2 === 1) {
+         return `${numero.toString()} é ímpar`
+      }
+   }) 
 }
 
 // Exercício 18
