@@ -312,6 +312,21 @@ const pessoas = [
 
 function retornaPessoasAutorizadas() {
    // implemente sua lógica aqui
+   const pessoas = [
+      { nome: "Paula", idade: 12, altura: 1.8},
+      { nome: "João", idade: 20, altura: 1.3},
+      { nome: "Pedro", idade: 15, altura: 1.9},
+      { nome: "Luciano", idade: 22, altura: 1.8},
+      { nome: "Artur", idade: 10, altura: 1.2},
+      { nome: "Soter", idade: 70, altura: 1.9}
+   ]
+
+   const pessoasAutorizadas = pessoas.filter((individuo) => {
+      if(individuo.idade > 14 && individuo.idade < 60 && individuo.altura >= 1.5) {
+         return true
+      }
+      return false
+   })
 }
 
 
@@ -319,6 +334,22 @@ function retornaPessoasAutorizadas() {
 
 function retornaPessoasNaoAutorizadas() {
    // implemente sua lógica aqui
+   const pessoas = [
+      { nome: "Paula", idade: 12, altura: 1.8},
+      { nome: "João", idade: 20, altura: 1.3},
+      { nome: "Pedro", idade: 15, altura: 1.9},
+      { nome: "Luciano", idade: 22, altura: 1.8},
+      { nome: "Artur", idade: 10, altura: 1.2},
+      { nome: "Soter", idade: 70, altura: 1.9}
+   ] 
+
+   const pessoasNaoAutorizadas = pessoas.filter((individuo) => {
+      if(individuo.idade < 14 || individuo.idade > 60 || individuo.altura < 1.5) {
+         return true
+      }
+      
+      return false
+   })
 }
 
 //Exercício 19
