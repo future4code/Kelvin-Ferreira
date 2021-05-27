@@ -1,0 +1,740 @@
+{
+	"info": {
+		"_postman_id": "79f43c73-620e-4d14-b970-7706d22262af",
+		"name": "Playlists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criação Playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rock\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checagem de playlist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar Tracks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Good Life\", \r\n    \"artist\": \"Kanye West\",\r\n    \"url\": \"https://music.youtube.com/watch?v=jG1joHmrRoQ&feature=share\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/b83d326a-7ed4-48e8-96c6-b0c4e4d58b44/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"b83d326a-7ed4-48e8-96c6-b0c4e4d58b44",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checagem de tracks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/b83d326a-7ed4-48e8-96c6-b0c4e4d58b44/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"b83d326a-7ed4-48e8-96c6-b0c4e4d58b44",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar playlist favorita",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/search?name=Hip-Hop",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hip-Hop"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add tracks na favorita",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Cowboy\",\r\n    \"artist\": \"Tyler, the Creator\",\r\n    \"url\": \"https://music.youtube.com/watch?v=kIrWCBIvXSA&feature=share\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/b83d326a-7ed4-48e8-96c6-b0c4e4d58b44/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"b83d326a-7ed4-48e8-96c6-b0c4e4d58b44",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checar novas adições",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/b83d326a-7ed4-48e8-96c6-b0c4e4d58b44/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"b83d326a-7ed4-48e8-96c6-b0c4e4d58b44",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add track gosto menos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Survival\",\r\n    \"artist\": \"Drake\",\r\n    \"url\": \"https://music.youtube.com/watch?v=VtEBRE9ul90&feature=share\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/b83d326a-7ed4-48e8-96c6-b0c4e4d58b44/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"b83d326a-7ed4-48e8-96c6-b0c4e4d58b44",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checar a que gosto menos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/b83d326a-7ed4-48e8-96c6-b0c4e4d58b44/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"b83d326a-7ed4-48e8-96c6-b0c4e4d58b44",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletando a  que gosto menos",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/b83d326a-7ed4-48e8-96c6-b0c4e4d58b44/tracks/b08692a0-ce95-4c09-b8cc-bf4efe62eef6",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"b83d326a-7ed4-48e8-96c6-b0c4e4d58b44",
+						"tracks",
+						"b08692a0-ce95-4c09-b8cc-bf4efe62eef6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validação remoção",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/b83d326a-7ed4-48e8-96c6-b0c4e4d58b44/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"b83d326a-7ed4-48e8-96c6-b0c4e4d58b44",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar playlists",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/c554b3aa-f612-4fb8-8e4f-7add55be47f2",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"c554b3aa-f612-4fb8-8e4f-7add55be47f2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checagem remoção playlists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criação nova playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Hip-Hop\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checagem nova playlist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adição novas músicas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Slow Jamz\",\r\n    \"artist\": \"Kanye West\",\r\n    \"url\": \"https://music.youtube.com/watch?v=pwkYUhePecQ&feature=share\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/13c9f118-6861-4fb8-bbb0-bea2bcc6bfaf/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"13c9f118-6861-4fb8-bbb0-bea2bcc6bfaf",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checagem novas tracks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/13c9f118-6861-4fb8-bbb0-bea2bcc6bfaf/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"13c9f118-6861-4fb8-bbb0-bea2bcc6bfaf",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apagar uma das músicas",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/13c9f118-6861-4fb8-bbb0-bea2bcc6bfaf/tracks/f422f971-8803-4fe5-9b2f-ef8589c20595",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"13c9f118-6861-4fb8-bbb0-bea2bcc6bfaf",
+						"tracks",
+						"f422f971-8803-4fe5-9b2f-ef8589c20595"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validando remoção",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/13c9f118-6861-4fb8-bbb0-bea2bcc6bfaf/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"13c9f118-6861-4fb8-bbb0-bea2bcc6bfaf",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criando novas playlists",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rap BR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checando novas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionando novas tracks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Junho de 94\",\r\n    \"artist\": \"Djonga\",\r\n    \"url\": \"https://music.youtube.com/watch?v=EFl1PrlFFE8&feature=share\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/101f0fc1-64df-4cfe-9fe0-5fdff7de643b/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"101f0fc1-64df-4cfe-9fe0-5fdff7de643b",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checar novas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "kelvin-ferreira-munoz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/591df63b-5537-4b09-b119-c172f9ed69f1/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"591df63b-5537-4b09-b119-c172f9ed69f1",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
