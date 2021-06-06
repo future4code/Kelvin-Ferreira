@@ -41,69 +41,119 @@ class App extends React.Component {
     this.pegarListaDeUsuarios()
   }
 
-  criarUsuario = () => {
+  criarUsuario = async () => {
     const body = {
       name: this.state.valorInputNome,
       email: this.state.valorInputEmail
     };
-    axios.post(
-      "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
-      ,
-      body,
-      {
-        headers: {
-          Authorization: "kelvin-ferreira-munoz"
+
+    try {
+      await axios.post(
+        "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
+        ,
+        body,
+        {
+          headers: {
+            Authorization: "kelvin-ferreira-munoz"
+          }
         }
-      }
-    )
-      .then(() => {
-        alert("O usuário foi criado com sucesso!")
-        this.setState({
-          valorInputNome: "",
-          valorInputEmail: ""
-        })
+      )
+      alert("O usuário foi criado com sucesso!")
+      this.setState({
+        valorInputNome: "",
+        valorInputEmail: ""
       })
-      .catch(() => {
-        alert("Erro! Confirme se os dados inseridos estão corretos.")
-      })
+    } catch {
+      alert("Erro! Confirme se os dados inseridos estão corretos.")
+    }
+
+    // axios.post(
+    //   "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
+    //   ,
+    //   body,
+    //   {
+    //     headers: {
+    //       Authorization: "kelvin-ferreira-munoz"
+    //     }
+    //   }
+    // )
+    //   .then(() => {
+    //     alert("O usuário foi criado com sucesso!")
+    //     this.setState({
+    //       valorInputNome: "",
+    //       valorInputEmail: ""
+    //     })
+    //   })
+    //   .catch(() => {
+    //     alert("Erro! Confirme se os dados inseridos estão corretos.")
+    //   })
   }
 
-  pegarListaDeUsuarios = () => {
-    axios.get(
-      "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
-      {
-        headers: {
-          Authorization: "kelvin-ferreira-munoz"
+  pegarListaDeUsuarios = async () => {
+    try {
+      const resposta = await axios.get(
+        "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
+        {
+          headers: {
+            Authorization: "kelvin-ferreira-munoz"
+          }
         }
-      }
-    )
-      .then((resposta) => {
-        this.setState({ listaUsuarios: resposta.data })
-      })
-      .catch(() => {
-        alert("Algo deu errado :(")
-      })
+      )
+      this.setState({ listaUsuarios: resposta.data })
+    } catch {
+      alert("Algo deu errado :(")
+    }
+    // axios.get(
+    //   "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
+    //   {
+    //     headers: {
+    //       Authorization: "kelvin-ferreira-munoz"
+    //     }
+    //   }
+    // )
+    //   .then((resposta) => {
+    //     this.setState({ listaUsuarios: resposta.data })
+    //   })
+    //   .catch(() => {
+    //     alert("Algo deu errado :(")
+    //   })
   }
 
-  deletarUsuario = (idUsuario) => {
+  deletarUsuario = async (idUsuario) => {
     const id = idUsuario
-    axios.delete(
-      `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`,
-      {
-        headers: {
-          Authorization: "kelvin-ferreira-munoz"
-        }
-      }
-    )
-      .then(() => {
-        if (window.confirm("Deseja mesmo deletar o usuário?")) {
-          this.pegarListaDeUsuarios()
-          alert("Usuário deletado com sucesso")
-        }
-      })
-      .catch(() => {
+    if (window.confirm("Deseja mesmo deletar o usuário?")) {
+      try {
+        await axios.delete(
+          `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`,
+          {
+            headers: {
+              Authorization: "kelvin-ferreira-munoz"
+            }
+          }
+        )
+        this.pegarListaDeUsuarios()
+        alert("Usuário deletado com sucesso")
+      } catch {
         alert("Algo deu errado :(")
-      })
+      }
+    }
+    // axios.delete(
+    //   `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`,
+    //   {
+    //     headers: {
+    //       Authorization: "kelvin-ferreira-munoz"
+    //     }
+    //   }
+    // )
+    //   .then(() => {
+    //     if (window.confirm("Deseja mesmo deletar o usuário?")) {
+    //       this.pegarListaDeUsuarios()
+    //       alert("Usuário deletado com sucesso")
+    //     }
+    //   })
+    //   .catch(() => {
+    //     alert("Algo deu errado :(")
+    //   })
   }
 
   render() {
