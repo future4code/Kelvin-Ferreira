@@ -1,13 +1,12 @@
 import React from 'react'
-import { ListTripsPage } from './pages/ListTripsPage'
+import { Router }  from './route/Router'
 
 function App() {
+
+
   return (
     <div className="App">
-      <header>
-        <h1>Labex</h1>
-      </header>
-      <ListTripsPage />
+      <Router />
     </div>
   );
 }
