@@ -8,8 +8,8 @@ export function ListTripsPage() {
     const history = useHistory() 
     const tripList = useTripRequest('trips')
 
-    const goToApplicationForm = () => {
-        history.push('/trips/application')
+    const goToApplicationForm = (idViagem) => {
+        history.push(`/trips/application/${idViagem}`)
     }
 
     return (
@@ -20,7 +20,7 @@ export function ListTripsPage() {
                 return (
                     <div key={trip.id}>
                         <p>{trip.name}</p>
-                        <button onClick={goToApplicationForm}>Candidate-se</button>
+                        <button onClick={() => goToApplicationForm(trip.id)}>Candidate-se</button>
                     </div>
                 )
             })}

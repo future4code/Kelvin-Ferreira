@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 
@@ -9,6 +9,15 @@ import { useTripRequest } from '../hooks/useTripRequest'
 export function AdminHomePage() {
     const history = useHistory()
     const tripList = useTripRequest('trips')
+
+    useEffect(() => {
+        const token = localStorage.getItem("token")
+
+        if (token === null) {
+            console.log("Não está logado!!!")
+            history.push("/login")
+        }
+    }, [])
 
     const goToTripDetails = (idViagem) => {
         history.push(`/admin/trip/${idViagem}`)
@@ -28,12 +37,12 @@ export function AdminHomePage() {
                 }
             }
         )
-        .then(() => {
-            alert('Deletado com sucesso')
-        })
-        .catch(error => {
-            console.log(error)
-        })
+            .then(() => {
+                alert('Deletado com sucesso')
+            })
+            .catch(error => {
+                console.log(error)
+            })
 
     }
 
@@ -53,7 +62,7 @@ export function AdminHomePage() {
 
             <button onClick={goToCreateTrip}>Criar nova viagem</button>
 
-            
+
         </div>
     )
 }

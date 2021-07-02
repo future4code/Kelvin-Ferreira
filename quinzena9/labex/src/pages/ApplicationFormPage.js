@@ -1,11 +1,13 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import axios from 'axios'
+import { useHistory, useParams } from 'react-router-dom'
 
 import { Header } from '../components/Header'
 import { useForms } from '../hooks/useForms'
 
 export function ApplicationFormPage() {
     const history = useHistory()
+    const params = useParams()
     const [forms, onChange, cleanFields] = useForms({
         name: "",
         age: 0,
@@ -18,11 +20,12 @@ export function ApplicationFormPage() {
         history.goBack()
     }
 
-    const userApplication = (e, idViagem) => {
+    console.log(forms)
+    const userApplication = (e) => {
         e.preventDefault()
 
         axios.post(
-            `https://us-central1-labenu-apis.cloudfunctions.net/labeX/kelvin-ferreira-munoz/trips/${idViagem}/apply`,
+            `https://us-central1-labenu-apis.cloudfunctions.net/labeX/kelvin-ferreira-munoz/trips/${params}/apply`,
             forms,
             {
                 headers: {
@@ -31,6 +34,7 @@ export function ApplicationFormPage() {
             }
         ).then(() => {
             alert('candidtaou-se com sucesso')
+            cleanFields()
         }).catch((error) => {
             console.log(error.response)
         })
