@@ -32,7 +32,7 @@ export function Router() {
                     <CreateTripPage/>
                 </Route>
 
-                <Route exact path={'/admin/trips/:id'}>
+                <Route exact path={'/admin/trip/:id'}>
                     <TripDetailsPage />
                 </Route>
 

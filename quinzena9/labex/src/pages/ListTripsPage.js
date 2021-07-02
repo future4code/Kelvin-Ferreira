@@ -1,29 +1,12 @@
-import React, { useState, useEffect} from 'react'
-import axios from 'axios'
+import React from 'react'
 import { useHistory } from 'react-router-dom'
 
 import { Header } from '../components/Header'
+import { useTripRequest } from '../hooks/useTripRequest'
 
 export function ListTripsPage() {
-    const [tripList, setTripList] = useState([])
-
-    const history = useHistory()
-
-    const getViagens = async () => {
-        try {
-            const response = await axios.get(
-                'https://us-central1-labenu-apis.cloudfunctions.net/labeX/kelvin-ferreira-munoz/trips'
-            )
-            console.log(response.data.trips)
-            setTripList(response.data.trips)
-        } catch {
-
-        }
-    }
-
-    useEffect(() => {
-        getViagens()
-    }, [])
+    const history = useHistory() 
+    const tripList = useTripRequest('trips')
 
     const goToApplicationForm = () => {
         history.push('/trips/application')
@@ -33,14 +16,15 @@ export function ListTripsPage() {
         <div>
             <Header />
             <h2>Viagens</h2>
-            {tripList.map((trip) => {
+            {tripList && tripList.trips.map((trip) => {
                 return (
                     <div key={trip.id}>
                         <p>{trip.name}</p>
+                        <button onClick={goToApplicationForm}>Candidate-se</button>
                     </div>
                 )
             })}
-            <button onClick={goToApplicationForm}>Candidate-se</button>
+
 
         </div>
     )
