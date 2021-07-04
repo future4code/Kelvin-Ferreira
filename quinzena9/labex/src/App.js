@@ -1,13 +1,14 @@
 import React from 'react'
 import { Router }  from './route/Router'
+import GlobalStyle from './GlobalStyle'
 
 function App() {
-
   return (
-    <div className="App">
+    <section>
+      <GlobalStyle />
       <Router />
-    </div>
-  );
+    </section>
+  )
 }
 
 export default App;

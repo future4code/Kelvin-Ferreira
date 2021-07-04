@@ -16,7 +16,7 @@ export function Router() {
                     <ListTripsPage />
                 </Route>
 
-                <Route exact path={'/trips/application/:id'}>
+                <Route exact path={'/trips/application'}>
                     <ApplicationFormPage />
                 </Route>
 
